@@ -1,0 +1,226 @@
+@font-face {
+  font-family: 'Eugusto';
+  src: url(../Assets/Fonts/Eugusto.otf);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Rubik';
+  src: url(../Assets/Fonts/Rubik.ttf);
+  font-weight: 400;
+}
+
+h1 {
+  font-family: 'Eugusto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 72px;
+  line-height: 79px;
+  color: #0056BC;
+}
+
+h2 {
+  font-family: 'Eugusto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 53px;
+  color: #0056BC;
+}
+
+h3 {
+  font-family: 'Eugusto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 40px;
+  color: #FF5C00;
+}
+
+p {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 30px;
+  color: #0056BC;
+}
+
+.primary {
+  width: 150px;
+  height: 50px;
+  border-radius: 30px;
+  background-color: #ff5c00;
+  color: #ffffff;
+  font-family: "Helvetica";
+  font-size: 16px;
+  line-height: 13px;
+  border: none;
+}
+
+.navBar {
+  position: fixed;
+  z-index: 999;
+}
+
+.navBar .topNav .imgContainer {
+  display: none;
+}
+
+.navBar .topNav button {
+  margin-right: 35px;
+}
+
+.navBar .topNav .desktopMenu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: 'Rubik';
+  font-size: 24px;
+  color: #0056BC;
+  list-style: none;
+}
+
+.navBar .topNav .desktopMenu li a {
+  color: #0056BC;
+  text-decoration: none;
+  margin-right: 35px;
+}
+
+.navBar .topNav .desktopMenu li a:hover {
+  font-weight: bold;
+}
+
+.popUp {
+  width: 450px;
+  margin-top: 200px;
+}
+
+.popUp button {
+  margin-bottom: 35px;
+}
+
+.popUp p {
+  font-size: 16px;
+}
+
+.popUp input::-webkit-input-placeholder {
+  font-size: 16px;
+}
+
+.popUp input:-ms-input-placeholder {
+  font-size: 16px;
+}
+
+.popUp input::-ms-input-placeholder {
+  font-size: 16px;
+}
+
+.popUp input::placeholder {
+  font-size: 16px;
+}
+
+.popUp .close {
+  width: 30px;
+  height: 30px;
+  margin: 35px;
+  background-size: auto;
+}
+
+.popUp .close:hover {
+  background-image: url("../Assets/Icons/HamMenuCloseHover.svg");
+}
+
+.content .wrap {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  min-width: 0;
+  /* new */
+  overflow: hidden;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.content .wrap .container {
+  width: 40vw;
+  margin-left: 35px;
+}
+
+.content .wrap .container p {
+  width: 40vw;
+}
+
+.content .wrap .container h2 {
+  width: 40vw;
+}
+
+.content .wrap img {
+  width: 40vw;
+}
+
+.cardContainer {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.cardContainer .card {
+  width: 20vw;
+  height: 760px;
+  margin-right: 18px;
+}
+
+.cardContainer .card img {
+  position: relative;
+  width: 20vw;
+  height: 760px;
+  position: absolute;
+}
+
+.cardContainer .card .text {
+  display: none;
+  width: 20vw;
+  height: 760px;
+  z-index: 998;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.cardContainer .card .text h3 {
+  height: auto;
+  margin: 35px;
+}
+
+.cardContainer .card .text .p {
+  margin-left: 35px;
+  margin-right: 35px;
+}
+
+.cardContainer .card:hover .text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+footer li {
+  font-size: 16px;
+}
+/*# sourceMappingURL=desktop.css.map */

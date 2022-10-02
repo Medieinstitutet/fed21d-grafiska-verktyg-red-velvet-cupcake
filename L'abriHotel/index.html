@@ -1,0 +1,151 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>L’abri Hotel</title>
+  <meta name="description" content="L’abri Hotel, a place to unwind in Switzerland">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+
+  <link rel="stylesheet" href="./stylesheets/style.min.css">
+
+</head>
+
+<body>
+    <header class="navBar" id="navBar">
+        <div class="topNav">
+            <div class="imgContainer">
+                <img src="./Assets/Icons/HamMenu.svg" onclick="openMenu()" alt="menuIcon" id="menuIcon"> 
+                <img src="./Assets/Icons/HamMenuClose.svg" onclick="closeMenu()" alt="closeMenuIcon" id="closeMenu">
+            </div>
+            <ul class="desktopMenu" id="desktopMenu">
+                <li><a href="#">Welcome</a></li>
+                <li><a class="active" href="index.html">About</a></li>
+                <li><a href="#">Experience</a></li>
+            </ul>
+            <h1>L’abri</h1>
+            <button class="primary">BOOK NOW</button>
+        </div>
+        <ul class="menu" id="menu">
+            <li><a href="#">Welcome</a></li>
+            <li><a class="active" href="index.html">About</a></li>
+            <li><a href="#">Experience</a></li>
+        </ul>
+    </header>
+
+    <div class="hero" id="hero">
+        <img src="./Assets/Images/hero.jpeg" alt="heroImg" class="heroImg">
+        <div class="cloud"></div>
+        <div class="popUp" id="popUp">
+            <div class="close" onclick="closePopUp()"></div>
+            <h3>NORTH STAR NEWSLETTER</h3>
+            <p>There may be other newspapers around that are “stars”, but ours is different. As the North Star, it acts as a guiding light for alpine spirits. Feeling adventurous? Sign up!</p>
+            <input placeholder="Email"/>
+            <button class="primary">SUBSCRIBE</button>
+        </div>
+    </div>
+
+    <div class="content" id="content">
+        <div class="wrap">
+            <img src="./Assets/Images/reception.jpg" alt="reception">
+            <div class="container">
+                <h2>Welcome to Hotel L’abri</h2>
+                <p>Hotel L’abri  is not your average hotel in Switzerland. Sure, it’s a place to stay away from home, but it is also a place to unwind, a place to meet with friends, a place to meet new people, a place to be inspired and a place to feel wanted. We offer a bespoke boutique hotel experience at L’abri desired by many, yet offered by few.</p>
+                <p>Want to know more about the hotel?</p>
+                <a href="">Read more</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="cardContainer" id="cards">
+        <div class="card">
+            <div class="text">
+                <h3 class="card">SLEEP</h3>
+                <div class="p">
+                    <p>Not only is your alpine escape comfortable, but there are 67 rooms and suites to choose from (and most have Mountain views). What's more, you'll have all-new interiors, featuring a contemporary reinterpretation of the pioneering days of the Nordic alpinists. But your room is not without challenges. The greatest challenge? Getting out of bed.</p>
+                </div>
+                
+            </div>
+            <img src="./Assets/Images/sleep.jpg" alt="sleep"> 
+        </div>
+
+        <div class="card">
+            <div class="text">
+                <h3 class="card">SKI</h3>
+                <div class="p">
+                    <p>The ski area is a good mix for all levels of skiers, so you'll find everything from the many kid's slopes to leg-killing black moguls or smooth red cruiser pistes.  There are large areas of easy accessible off-piste. You ski over glaciers, along a 500 meter high cliff line and end up at the very end of the valley.</p>
+                </div>        
+            </div>
+            <img src="./Assets/Images/ski.jpg" alt="ski">
+        </div>
+
+        <div class="card">
+            <div class="text">
+                <h3 class="card">EAT</h3>
+                <div class="p">
+                    <p>Every alpine spirit deserves a hearty regional meal. And thanks to our own cows and pigs, and the local farm yoghurt, cheese and meats, you’ll have everything you need to refuel right here. Your tastebuds will also have their own journey, with traditional and innovative options across our bars and restaurants. Let the culinary exploration begin!</p>
+                </div>
+            </div>
+            <img src="./Assets/Images/eat.jpg" alt="eat">
+        </div>
+
+        <div class="card">
+            <div class="text">
+                <h3 class="card">DRINK</h3>
+                <div class="p">
+                    <p>Come enjoy a glass of wine at Bar à Vin, our wine bar located on the ground floor in our café and courtyard. At Bar à Vin you can explore around 150 different wines carefully curated by our sommelier. We have more than 30 exciting wines by the glass, so you can easily try your way around. And if you are curious we'd be thrilled to show you our favorites and tell you everything we know about it.</p> 
+                </div>        
+            </div>
+            <img src="./Assets/Images/drink.jpg" alt="drink">
+        </div>
+    </div>
+
+    <footer id="footer">
+        <ul class="footerUl">
+            <li>Chemin 4</li>
+            <li>|</li>
+            <li>1936 Verbier</li>
+            <li>|</li>
+            <li>Switzerland</li>
+        </ul>
+        <ul class="footerUl">
+            <li>+41 23 456 77 88</li>
+            <li>|</li>
+            <li>info@labri.ch</li>
+        </ul>
+    </footer>
+    <script>
+        function openMenu(){
+            document.getElementById("navBar").style.height ="100vh";
+            toggle("menu", "flex");
+            toggle("hero", "none");
+            toggle("content", "none");
+            toggle("cards", "none");
+            toggle("footer", "none");
+            toggle("menuIcon", "none");
+            toggle("closeMenu", "block")
+        };
+
+        function closeMenu(){
+            document.getElementById("navBar").style.height ="80px";
+            toggle("menu", "none");
+            toggle("hero", "block");
+            toggle("content", "flex");
+            toggle("cards", "flex");
+            toggle("footer", "block");
+            toggle("menuIcon", "block");
+            toggle("closeMenu", "none")
+        };
+
+        function toggle(id,state){
+            document.getElementById(id).style.display = state;
+        };
+
+        function closePopUp(){
+            toggle("popUp", "none")
+        }
+    </script>
+</body>
